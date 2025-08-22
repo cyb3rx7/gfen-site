@@ -86,7 +86,16 @@
       <div class="logo" aria-hidden="true">גפ״ן</div>
       <h1 class="title">برامج גפ״ן</h1>
     </div>
-  </header>
+  
+    <div class="lang" style="margin-left:auto;display:flex;align-items:center;gap:8px;">
+      <label for="langSel" style="color:#111827;font-weight:600;">لغة:</label>
+      <select id="langSel" class="select" aria-label="Language">
+        <option value="ar" selected>العربية</option>
+        <option value="en">English</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
+</header>
 
   <main>
     <div class="grid">
@@ -203,6 +212,11 @@
 
     const htmlEl = document.documentElement;
 applyLang(localStorage.getItem("lang") || "ar");
+sel.addEventListener('change', (e)=>{
+  const lang = e.target.value;
+  localStorage.setItem('lang', lang);
+  applyLang(lang);
+});
 sel.addEventListener('change', (e)=> {
       const lang = e.target.value;
       localStorage.setItem('lang', lang);
@@ -233,36 +247,9 @@ sel.addEventListener('change', (e)=> {
       document.title = dict.meta_title || document.title;
     }
   
-    // Floating language button toggle + selection
-    const langBtn = document.getElementById('langBtn');
-    const langMenu = document.getElementById('langMenu');
+    </script>
 
-    function toggleMenu(show){
-      langMenu.style.display = show ? 'flex' : (langMenu.style.display === 'flex' ? 'none' : 'flex');
-    }
-    langBtn.addEventListener('click', (e)=>{
-      e.stopPropagation();
-      toggleMenu();
-    });
-    langMenu.querySelectorAll('button').forEach(btn=>{
-      btn.addEventListener('click', (e)=>{
-        const lang = btn.getAttribute('data-lang');
-        localStorage.setItem('lang', lang);
-        applyLang(lang);
-        langMenu.style.display = 'none';
-      });
-    });
-    document.addEventListener('click', (e)=>{
-      if(langMenu.style.display === 'flex') langMenu.style.display = 'none';
-    });
   
-</script>
-
-  <div class="lang-btn" id="langBtn" title="Change language">🌐</div>
-  <div class="lang-menu" id="langMenu" dir="rtl">
-    <button data-lang="ar">العربية</button>
-    <button data-lang="en">English</button>
-    <button data-lang="he">עברית</button>
-  </div>
+  
 </body>
 </html>
