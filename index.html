@@ -28,9 +28,12 @@
     .subtitle{ color: var(--muted); margin:0; font-size:14px }
     .lang{ display:flex; align-items:center; gap:8px }
     .select{
-      background: rgba(255,255,255,.06); color:var(--text);
-      border:1px solid rgba(255,255,255,.18); border-radius:12px; padding:8px 10px;
-    }
+  background:#f9fafb;
+  color:#111827;
+  border:1px solid #d1d5db;
+  border-radius:12px;
+  padding:8px 10px;
+}
     main{max-width:1100px;margin:12px auto 50px;padding:0 18px}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
     .card{grid-column:span 12;background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)), var(--card);
@@ -58,25 +61,14 @@
   <header>
     <div class="brand">
       <div class="logo" aria-hidden="true">גפ״ן</div>
-      <div>
-        <h1 class="title" data-i18n="title">بوابة برامج גפ״ן — وصول سريع</h1>
-        <p class="subtitle" data-i18n="subtitle">صفحة واحدة بسيطة لفتح أو تحميل ثلاثة ملفات PDF. تصلح للاستضافة المجانية (GitHub Pages / Netlify / Vercel / Neocities).</p>
-      </div>
-    </div>
-    <div class="lang">
-      <label for="langSel" data-i18n="choose_lang">اللغة:</label>
-      <select id="langSel" class="select" aria-label="Language">
-        <option value="ar" selected>العربية</option>
-        <option value="en">English</option>
-        <option value="he">עברית</option>
-      </select>
+      <h1 class="title">برامج גפ״ן</h1>
     </div>
   </header>
 
   <main>
     <div class="grid">
       <article class="card" aria-labelledby="c1">
-        <span class="pill" title="PDF">PDF • <span data-i18n="program">برنامج</span></span>
+</span>
         <h3 id="c1" data-i18n="card1_title">מעאלם ציוני דרך — גפ״ן 5023</h3>
         <p data-i18n="card1_desc">مبادرات تربوية وعاطفية، سلوكيات، تعلم ذي معنى وأنشطة إثرائية.</p>
         <div class="actions">
@@ -86,11 +78,10 @@
           </a>
           <a class="btn" href="docs/maalem-5023.pdf" download><span data-i18n="download">تحميل</span></a>
         </div>
-        <div class="small">docs/maalem-5023.pdf</div>
-      </article>
+</article>
 
       <article class="card" aria-labelledby="c2">
-        <span class="pill" title="PDF">PDF • <span data-i18n="program">برنامج</span></span>
+</span>
         <h3 id="c2" data-i18n="card2_title">סלסאל חינוך ורווחה — גפ״ן 10850 / 13501</h3>
         <p data-i18n="card2_desc">محتوى اجتماعي-قيمي، يوم تراث بدوي، تظبيط رياضي، وأنشطة جماعية.</p>
         <div class="actions">
@@ -100,11 +91,10 @@
           </a>
           <a class="btn" href="docs/salsal-10850-13501.pdf" download><span data-i18n="download">تحميل</span></a>
         </div>
-        <div class="small">docs/salsal-10850-13501.pdf</div>
-      </article>
+</article>
 
       <article class="card" aria-labelledby="c3">
-        <span class="pill" title="PDF">PDF • <span data-i18n="program">برنامج</span></span>
+</span>
         <h3 id="c3" data-i18n="card3_title">יוניברס עוצמה — גפ״ן 51750 (VR)</h3>
         <p data-i18n="card3_desc">تعلم تفاعلي بالواقع الافتراضي داخل الفصل — رحلات ومتاحف وتدريب للطاقم.</p>
         <div class="actions">
@@ -114,20 +104,18 @@
           </a>
           <a class="btn" href="docs/universe-ozma-51750.pdf" download><span data-i18n="download">تحميل</span></a>
         </div>
-        <div class="small">docs/universe-ozma-51750.pdf</div>
-      </article>
+</article>
     </div>
   </main>
 
   <footer>
-    <span data-i18n="footer">صُممت هذه الصفحة لتعمل مباشرة على أي استضافة ملفات ثابتة (Static Hosting). فقط ارفع المجلد كما هو.</span>
     <div style="margin-top:18px;">
       <a class="btn primary" href="https://wa.me/972505448858" target="_blank" rel="noopener">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <path d="M20 3.5A10.5 10.5 0 1 1 9.5 21l-5 1.5 1.5-5A10.5 10.5 0 0 1 20 3.5Z"/>
           <path d="M8.5 12a6 6 0 0 0 6 6"/>
         </svg>
-        <span data-i18n="whatsapp">تواصل عبر واتساب</span>
+        تواصل عبر واتساب
       </a>
     </div>
   </footer>
